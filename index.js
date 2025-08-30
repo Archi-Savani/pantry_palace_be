@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/user", userRoutes);
-app.use("/api/product",auth, productRoutes);
+app.use("/api/product", productRoutes);
 
 const connectDB = async () => {
     try {

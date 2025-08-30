@@ -7,14 +7,15 @@ import {
     updateProduct,
     deleteProduct,
 } from "../controllers/Product.js";
+import auth from "../middleware/auth";
 
 const router = express.Router();
 
 // Routes with image upload
-router.post("/", upload.single("image"), createProduct);
+router.post("/",auth, upload.single("image"), createProduct);
 router.get("/", getAllProducts);
-router.put("/:id", upload.single("image"), updateProduct);
+router.put("/:id",auth, upload.single("image"), updateProduct);
 router.get("/:id", getProductById);
-router.delete("/:id", deleteProduct);
+router.delete("/:id",auth, deleteProduct);
 
 export default router;
