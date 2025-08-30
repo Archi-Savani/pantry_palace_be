@@ -29,7 +29,7 @@ const connectDB = async () => {
         process.exit(1);
     }
 };
-
+//,loko,o
 const PORT = process.env.PORT || 5000;
 
 connectDB().then(() => {
