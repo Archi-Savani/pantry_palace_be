@@ -11,7 +11,7 @@ import auth from "../middleware/auth";
 
 const router = express.Router();
 
-// Routes with image upload
+// Routes with image uploads
 router.post("/",auth, upload.single("image"), createProduct);
 router.get("/", getAllProducts);
 router.put("/:id",auth, upload.single("image"), updateProduct);
