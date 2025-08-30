@@ -2,6 +2,7 @@
   "name": "pentry_palace_be",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },

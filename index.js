@@ -6,7 +6,6 @@ import cors from "cors";
 import userRoutes from "./routers/User.js"; // 👈 must include .js extension in ESM
 import productRoutes from "./routers/Product.js"; // 👈 must include .js extension in ESM
 import dotenv from "dotenv";
-import auth from "./middleware/auth.js";
 
 dotenv.config();
 
