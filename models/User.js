@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true, // confirm password must be given
         },
+        isAdmin: {
+            type: Boolean,
+            default: false, // default to regular user
+        },
     },
     { timestamps: true }
 );

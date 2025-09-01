@@ -5,7 +5,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import userRoutes from "./routers/User.js"; // 👈 must include .js extension in ESM
 import productRoutes from "./routers/Product.js"; // 👈 must include .js extension in ESM
+import cartRoutes from "./routers/Cart.js"; // 👈 must include .js extension in ESM
 import dotenv from "dotenv";
+import { authenticateToken as auth } from "./middleware/auth.js";
 
 dotenv.config();
 
@@ -18,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use("/api/user", userRoutes);
 app.use("/api/product", productRoutes);
+app.use("/api/cart",auth, cartRoutes);
 
 const connectDB = async () => {
     try {
